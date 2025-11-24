@@ -187,7 +187,7 @@ class LinterManager:
                 # It's importing a package - valid
                 return None
 
-            module_file = self.root_path / "/".join(module_parts) + ".py"
+            module_file = self.root_path / ("/".join(module_parts) + ".py")
             if module_file in self.module_defs:
                 defs = self.module_defs[module_file]
                 if attr_name not in defs:
